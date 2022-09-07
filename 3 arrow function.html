@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>arrow function in advane javascript</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    
+    // tow old method 
+    function hello(){
+        console.log("hello evryone")
+    }
+    hello();
+
+    let wish = function(name){
+        return `Good morning ${name}`;
+    }
+    console.log(wish("khodidas"));
+
+
+    // advance method
+
+    let name = () => console.log("khodidas");
+    name();
+
+    let welcome = (name,day) =>{
+        return `good morning ${name} your to ${day} left renew your card`;
+    }
+    console.log(welcome("khodidas",3));
+
+    // single line code when apply
+    let result = (name,marks) =>`hello ${name} your marks has ${marks}`;
+    
+    console.log(result("khodidas",3));
+    console.log(typeof result);
+
+    // single veriable peramitaers
+
+    let hey = name =>`hey ${name}`;
+    console.log(hey("khodidas"));
+
+
+</script>
+</html>
