@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>rest operator (function with multiple arguments)</title>
+</head>
+
+<body>
+    <h4 id="demo"></h4>
+</body>
+<script type="text/javascript">
+
+    // number 
+    function sum() {
+        console.log(arguments);
+        let sum = 0;
+        for (let i in arguments) {
+            sum += arguments[i];
+        }
+        document.write(sum + "<br>");
+    }
+    sum(20, 300, 30)
+    sum(30, 50)
+
+    // number with string
+    function string(name,course, ...args) {
+        console.log(arguments);
+
+        document.write(`hello ${name} of ${course} :`)
+        let string = 0;
+        for (let i in args) {
+            string += args[i];
+        }
+        document.write(string + "<br>");
+    }
+    string("three","btech",200, 300);
+    string("tow","mca",25, 300);
+    string("one","mtech",20, 300);
+    
+
+</script>
+
+</html>

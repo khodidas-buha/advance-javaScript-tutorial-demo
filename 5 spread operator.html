@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Spred operator in advance javascript</title>
+</head>
+
+<body>
+
+</body>
+<script type="text/javascript">
+
+    // simple use of spred oppreters 
+    
+    function string(name, ...args) {
+        console.log(arguments);
+
+        document.write(`hello ${name} :`)
+        let string = 0;
+
+        for (let i in args) {
+            string += args[i];
+        }
+        document.write(string);
+    }
+    var arr = [20,21,25,54]
+    string("three", ...arr);
+
+    // spred oppreters simple concat
+    var arr1 = [20,21,25,54]
+    var arr2 = [29,88,55,44];
+    var arr3 = arr1.concat(arr2);
+    console.log(arr3)
+
+    // spred oppreters simple concat  || add velue
+    var arr1 = [20,21,25,54]
+    var arr2 = [29,88,55,44];
+    var arr3 = [69,...arr1, ...arr2,69];
+    console.log(arr3)
+
+    //spred oppreters use ijn object
+
+    var obj1 = {
+        name : "john",
+        course : "MCA"
+    }
+
+    var obj2 = {
+        age : 55
+    }
+
+    var obj3 = {...obj1, ...obj2};
+    console.log(obj3);
+
+</script>
+
+</html>

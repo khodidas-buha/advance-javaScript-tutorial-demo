@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>object literals in advance javascript</title>
+</head>
+
+<body>
+
+</body>
+<script type="text/javascript">
+
+    //old method object
+    let name = "john";
+    let course = "mca";
+
+    var obj = {
+        name: name,
+        course: course,
+    };
+
+    console.log(obj);
+
+    // advance v use make object
+
+    var list = {
+        name: "john",
+        course: "MCA",
+        age: 21
+    };
+
+    console.log(list);
+
+    // advance v use make object
+
+    let fname = "ram kumar";
+    let ucourse = "mca";
+
+    var obj2 = {
+        fname,
+        ucourse
+    };
+
+    console.log(obj2);
+
+    //use variable as a property name
+
+    let n = "name";
+
+    var obj4 = {
+        [n]: "vijay mishra",
+        uni: "gujrat"
+    };
+
+    console.log(obj4);
+    console.log(obj4.name);
+
+    //use variable as a property name with concatinetion
+
+    let x = "student";
+
+    var obj4 = {
+        [x + "name"]: "vijay mishra",
+        uni: "gujrat"
+    };
+
+    console.log(obj4);
+
+    //use variable as a property name with concatinetion || function
+
+    let y = "student";
+
+    var obj4 = {
+        [y + "name"]: "vijay mishra",
+        uni: "gujrat uni",
+        detail: function () {
+            return `${this.studentname} is student of ${this.uni}`
+        }
+    };
+
+    console.log(obj4);
+    console.log(obj4.detail());
+
+    //use variable as a property name with concatinetion || function with advance v
+
+    let z = "student";
+
+    var obj5 = {
+        [z + "name"]: "vijay mishra",
+        uni: "gujrat univ",
+        detail() {
+            return `${this.studentname} is student of ${this.uni}`
+        }
+    };
+
+    console.log(obj5);
+    console.log(obj5['detail']());
+
+    //mack function its function value return as object
+
+    let sname = "ramkumar"
+    let suni = "gujrat uni"
+
+    function student(sname, suni) {
+        return { sname, suni }
+    }
+
+    console.log(student(sname, suni));
+
+    //mack function its function value return as object
+
+    let fristname = "ramkumar"
+    let lastname = "mishra"
+    let univ = "gujrat uni"
+
+    function student(fristname,lastname,univ) {
+        let fullname = fristname + " " + lastname;
+        return { fullname, univ}
+    }
+
+    let s = student(fristname,lastname,univ);
+    console.log(s.univ);
+
+</script>
+
+</html>
