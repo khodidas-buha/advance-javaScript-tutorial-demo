@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>oops intro</title>
+</head>
+<body>
+    
+</body>
+<script type="text/javascript">
+    
+    // oops introduxtion to constructor,prototype method,static function how to use in class and object mwthod
+
+    class student{
+        constructor(name,age){
+            this.studentname = name;
+            this.studentage = age;
+            console.log("constructor function");
+        }
+
+        hello(){
+            console.log(` hello ${this.studentname} your age is ${this.studentage}`)
+        }
+
+        static staticMethod(){
+            console.log("static function");
+        }
+    }
+    let a = new student("ramkumar",25);
+    let b = new student("john",35);
+    a.hello();
+    b.hello();
+    student.staticMethod()
+
+</script>
+</html>
