@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Destructuring Object </title>
+</head>
+<body>
+    <p id="name"></p>
+    <p id="age"></p>
+    <p id="city"></p>
+<!-- short name -->
+    <p id="n"></p>
+    <p id="a"></p>
+    <p id="c"></p>
+</body>
+<script type="text/javascript">
+    
+    var user ={
+        name : "hello",
+        age : 25,
+        city : "ahmd"
+    }
+
+    var {name,age,city} = user;
+
+    document.getElementById('name').innerHTML = name;
+    document.getElementById('age').innerHTML = age;
+    document.getElementById('city').innerHTML = city;
+
+    // short name method
+    var users ={
+        name : "hello",
+        age : 25,
+        city : "ahmd"
+    }
+
+    var {name : n ,age : a ,city : c} = users;
+
+    document.getElementById('n').innerHTML = name;
+    document.getElementById('a').innerHTML = age;
+    document.getElementById('c').innerHTML = city;
+</script>
+</html>
